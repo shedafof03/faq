@@ -18,7 +18,7 @@ class profile extends TestCase
 
         $user = factory(\App\User::class)->make();
         $user->save();
-        $profile = factory(\App\Profile::class)->make();
+        $profile = factory(\App\profileTest::class)->make();
         $profile->user()->associate($user);
         $this->assertTrue($profile->save());
     }
