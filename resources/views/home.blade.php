@@ -20,7 +20,6 @@
                                                 <small class="text-muted">
                                                     Updated: {{ $question->created_at->diffForHumans() }}
                                                     Answers: {{ $question->answers()->count() }}
-
                                                 </small>
                                             </div>
                                             <div class="card-body">
@@ -29,20 +28,20 @@
                                             <div class="card-footer">
                                                 <p class="card-text">
 
-                                                    <a class="btn btn-primary float-right" href="#">
+                                                    <a class="btn btn-primary float-right"
+                                                       href="{{ route('question.show', ['id' => $question->id]) }}">
                                                         View
                                                     </a>
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
-                                @empty
-                                    There are no questions to view, you can  create a question.
-                                @endforelse
-
-
+                                    @empty
+                                        <a class="btn btn-primary" href="{{ route('question.create' }}">
+                                            There are no questions to view, click to create a question.
+                                        </a>
+                                    @endforelse
                             </div>
-
                         </div>
                         <div class="card-footer">
                             <div class="float-right">
