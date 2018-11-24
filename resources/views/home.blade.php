@@ -42,6 +42,7 @@
                                     @empty
                                             There are no questions to view, you can create a question.
                                     @endforelse
+                                    </a>
                             </div>
                         </div>
                         <div class="card-footer">
