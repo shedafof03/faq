@@ -69,7 +69,7 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
         $profile = $user->profile;
-        return view('profileTest')->with('profileTest', $profile);
+        return view('profile')->with('profile', $profile);
     }
 
     /**
@@ -83,8 +83,10 @@ class ProfileController extends Controller
         $user = User::find($user);
         $profile = $user->profile;
         $edit = TRUE;
-        return view('profileForm', ['profileTest' => $profile, 'edit' => $edit ]);
+
+        return view('profileForm', ['profile' => $profile, 'edit' => $edit ]);
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -98,14 +100,17 @@ class ProfileController extends Controller
             'fname' => 'required',
             'lname' => 'required',
         ], [
+
             'fname.required' => ' First is required',
             'lname.required' => ' Last is required',
+
         ]);
         $profile = Profile::find($profile);
         $profile->fname = $request->lname;
         $profile->lname = $request->lname;
         $profile->body = $request->body;
         $profile->save();
+
         return redirect()->route('home')->with('message', 'Updated Profile');
     }
 
