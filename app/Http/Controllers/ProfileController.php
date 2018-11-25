@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\profile;
+use App\Profile;
 use App\user;
 
 class ProfileController extends Controller
