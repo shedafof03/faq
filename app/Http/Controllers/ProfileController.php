@@ -28,7 +28,7 @@ class ProfileController extends Controller
     {
         $profile = new Profile();
         $edit = FALSE;
-        return view('profileForm', ['profileTest' => $profile,'edit' => $edit  ]);
+        return view('profileForm', ['profile' => $profile,'edit' => $edit  ]);
     }
 
     /**
