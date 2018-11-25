@@ -9,10 +9,6 @@
                         <a class="btn btn-primary float right" href="{{ route('questions.create') }}">
                             create a question.
                         </a>
-                        <a class="btn btn-primary float-right" href="#">
-                            Create a Question
-                        </a>
-
                         <div class="card-body">
 
                             <div class="card-deck">

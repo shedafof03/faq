@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">Create Answer</div>
-                    <div class="card-body">
+                    <div class="card-body">...</div>
                         @if($edit === FALSE)
                             {!! Form::model($answer, ['route' => ['answers.store', $question], 'method' => 'post']) !!}
 
