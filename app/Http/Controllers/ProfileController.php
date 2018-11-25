@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Profile;
-use App\user;
+use App\User;
 
 class ProfileController extends Controller
 {
@@ -28,7 +28,7 @@ class ProfileController extends Controller
     {
         $profile = new Profile();
         $edit = FALSE;
-        return view('profileForm', ['profile' => $profile,'edit' => $edit  ]);
+        return view('profileForm', ['profileTest' => $profile,'edit' => $edit  ]);
     }
 
     /**
@@ -69,7 +69,7 @@ class ProfileController extends Controller
     {
         $user = Auth::user();
         $profile = $user->profile;
-        return view('profile')->with('profile', $profile);
+        return view('profileTest')->with('profileTest', $profile);
     }
 
     /**
@@ -83,7 +83,7 @@ class ProfileController extends Controller
         $user = User::find($user);
         $profile = $user->profile;
         $edit = TRUE;
-        return view('profileForm', ['profile' => $profile, 'edit' => $edit ]);
+        return view('profileForm', ['profileTest' => $profile, 'edit' => $edit ]);
     }
     /**
      * Update the specified resource in storage.

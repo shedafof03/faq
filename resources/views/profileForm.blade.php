@@ -10,7 +10,7 @@
                         @if($edit === FALSE)
                             {!! Form::model($profile, ['route' => ['profile.store', Auth::user()->id], 'method' => 'post']) !!}
                         @else()
-                            {!! Form::model($profile, ['route' => ['profile.update', Auth::user()->id, $profile->id], 'method' => 'patch']) !!}
+                            {!! Form::model($profile, ['route' => ['profileTest', Auth::user()->id, $profile->id], 'method' => 'patch']) !!}
                         @endif
                         <div class="form-group">
                             {!! Form::label('fname', 'First Name') !!}
