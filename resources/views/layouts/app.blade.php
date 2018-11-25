@@ -64,7 +64,7 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 @if (Auth::user()->profile)
                                     <a class="dropdown-item"
-                                       href="{{ route('profileTest', ['user_id' => Auth::user()->id,'profile_id' => Auth::user()->profile->id]) }}">My
+                                       href="{{ route('ProfileTest', ['user_id' => Auth::user()->id,'profile_id' => Auth::user()->profile->id]) }}">My
                                         Profile</a>
 
                                 @else
